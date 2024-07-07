@@ -1,0 +1,23 @@
+# do not want the idea folder
+.idea
+virt/
+venv/
+
+# Exclude typical build and temporary files
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.git
+
+# Include specific .env files
+# This make sure locally we copy everything except .env files to containers
+.env
+.env.production
+.env.staging
+.env.aws
+.ebextensions/
+.ebignore
+.elasticbeanstalk
+.github
+.gitignore
