@@ -1,14 +1,31 @@
-# Use the official CentOS 7 base image
-FROM centos:centos7
+# Use a Python base image
+FROM python:3.11-slim
 
-# Install the Apache HTTP server package from the CentOS repository
-RUN yum install httpd -y
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+ENV FLASK_APP simwire.app
+# Set the working directory in the container
+WORKDIR /app
 
-# Copy the index.html file from the Docker build context to the default Apache document root directory in the container
-COPY index.html /var/www/html/
+# Copy the dependencies file to the working directory
+COPY requirements.txt .
 
-# Specify the command to run when the container starts, which starts the Apache HTTP server in the foreground
-CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
+# Install dependencies
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose port 80 to allow incoming HTTP traffic to the container
+# Install pytest
+RUN pip install pytest
+
+
+# Copy the current directory contents into the container at /app
+COPY . /app
+
+# Run the tests using pytest
+RUN pytest --disable-warnings
+
+# Expose port 80 to the outside world
 EXPOSE 80
+
+# Command to run the Flask application
+CMD ["flask", "run", "--host=0.0.0.0", "--port=80"]
