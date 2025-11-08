@@ -57,7 +57,7 @@ Here’s a quick breakdown of the project layout to help you get started:
 ## What Should You Not Modify?
 
 To keep your project up-to-date and compatible with future improvements:
-- Avoid changing core files like Dockerfile, docker-compose.yml, requirements.txt, env_load.py, and anything in `.github/` unless you have advanced needs.
+- **Be cautious when modifying core files** like Dockerfile, docker-compose.yml, requirements.txt, env_load.py, and anything in `.github/`. You will often need to customize these files (for example, to add dependencies or adjust Docker settings), but try to preserve their overall structure and review any comments or documentation before making changes. If possible, keep changes minimal and well-documented to make future updates easier.
 - Extend the codebase in `/models`, `/views`, `/blueprints`, `/dblib`, and `/tests`.
 
 ## The Value for You
