@@ -143,3 +143,8 @@ virt/
 .env.production
 .env.staging
 .elasticbeanstalk
+
+# ignore virtual environment directories
+bin/
+pyvenv.cfg
+lib64
