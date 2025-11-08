@@ -1,6 +1,6 @@
 ---
 name: 🐛 Bug Report
-about: Report a bug to help us improve JustAskDavidB VuesticUI
+about: Report a bug to help us improve JustAskDavidB
 title: "[Bug] - <short description>"
 labels: bug
 assignees: ''
@@ -29,7 +29,6 @@ What actually happened?
 - OS:  
 - Browser:  
 - Node Version:  
-- Vuestic UI Version:
 
 ## 📎 Additional Notes  
 Any logs, terminal output, or other notes.

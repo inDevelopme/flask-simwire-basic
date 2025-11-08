@@ -1,6 +1,6 @@
 ---
 name: 💡 Feature Request
-about: Suggest a new feature or improvement for JustAskDavidB VuesticUI
+about: Suggest a new feature or improvement for JustAskDavidB
 title: "[Feature] - <short description>"
 labels: enhancement
 assignees: ''
@@ -15,7 +15,7 @@ Why is this feature important or helpful to the project?
 
 ## ✅ Acceptance Criteria  
 - [ ] Clear use case(s)
-- [ ] Follows Vuestic UI design language
+- [ ] Follows project design guidelines
 - [ ] No negative effect on performance
 
 ## 🎯 Benefits  
